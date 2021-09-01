@@ -1,0 +1,132 @@
+html{
+      font-size: 62.5%;
+}
+body,html{
+      background-color: white;
+      height: 100vh;
+     
+}
+body{
+      margin: 0;
+      display: grid;
+      grid-template-areas: 'aside  header header header header header header'
+                             'aside section1 section1 section1 section1 section1 section2'
+                             'aside main main main main main main'
+                             'aside footer footer footer footer footer footer' ;
+}
+aside{
+      /* background-color: violet; */
+      grid-area:aside ;
+      /* border: 2px solid red; */
+      margin-left: 7rem;
+      margin-top: 2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      /* padding-bottom: 5rem; */
+      margin-bottom: 5rem;
+
+}
+aside h1{
+      /* border: 2px solid red; */
+      flex: .5;
+      text-align: left;
+      position: relative;
+      top: 1rem;
+      font-size: 3rem;
+      font-weight: bolder;
+      margin: 0;
+      padding-bottom: 0;
+}
+aside nav{
+      /* border: 2px solid red; */
+      flex:2;
+      
+}
+aside button{
+      /* border: 2px solid red; */
+}
+aside nav ul{
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: space-evenly;
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+}
+aside nav ul li{
+      list-style: none;
+      /* border: 2px solid red; */
+      font-size:1.5rem;
+      font-weight: lighter;
+}
+aside nav ul {
+     padding: 0;
+}
+aside button{
+      width: 10rem;
+      border-radius: 2rem;
+      border: none;
+      padding: 1rem;
+      outline: none;
+      background-color: crimson;
+      opacity: .8;
+      color: white;
+}
+header{
+      /* background-color: tomato; */
+      grid-area: header;
+}
+#sec1{
+      /* background-color: turquoise; */
+      grid-area:section1 ;
+      padding-left: 13rem;
+}
+#sec1 h1{
+      font-size: 5rem;
+      padding: 0;
+      margin: 0;
+      font-weight: bolder;
+}
+#sec2{
+      /* background-color: crimson; */
+      grid-area:section2 ;
+      padding-right: 12rem;
+      font-size: 1.3rem;
+      align-items: center;
+}
+main{
+      /* background-color: blue; */
+      grid-area:main ;
+      /* border: 2px solid red; */
+      display: flex;
+      justify-content: space-between;
+      margin-left: 15rem;
+      margin-right: 2rem;
+      
+}
+main .box{
+      /* border: 2px solid red; */
+      height: 100%;
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      box-shadow:  .1rem .1rem .5rem black;
+      outline: none;
+      border: none;
+}
+main .box .circularImage{
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+}
+footer{
+      /* background-color: chartreuse; */
+      grid-area:footer ;
+}
