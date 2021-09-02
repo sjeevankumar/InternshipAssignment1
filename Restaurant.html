@@ -8,32 +8,38 @@
       <link rel="stylesheet" href="Restaurant.css">
 </head>
 <body>
+      <!--------------------------------- sidebar --------------------------------->
       <aside>
-            <h1>Lorem <br>Ipsum</h1>
+            <h1 class="toBeReplaced">Lorem <br>Ipsum</h1>
             <nav>
+                  <input type="checkbox" id="expand_toggle">
+                  <label for="expand_toggle" id="expand_btn">&#9776</label>
                   <ul>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Cuisine</li>
-                        <li>Gallery</li>
-                        <li>Contact</li>
-                        <li>Book</li>
+                        <li class="expandable"><a class="firstLink" href="">About</a></li>
+                        <li class="expandable"><a href=""> Services</a></li>
+                        <li class="expandable"><a href="">Cuisine</a> </li>
+                        <li class="expandable"><a href="">Gallery</a></li>
+                        <li class="expandable"><a href="">Contact</a></li>
+                        <li class="expandable"><a href=""> Book</a></li>
                   </ul>
             </nav>
-            <button>Cart</button>
+            <button class="btn">Cart</button>
+            <button class="btn2">&#128722</button>
       </aside>
-
+<!-------------------------------------- header ---------------------------------------------->
       <header>
            
       </header>
-
+<!--------------------------------------- section1 -------------------------------------------->
       <section id="sec1">
             <h1>What are you<br> having for Lunch?</h1>
       </section>
+<!--------------------------------------- section2 -------------------------------------------->
 
       <section id="sec2">
-            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Lorem ipsum dolor<br> sit amet. Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet <br> consecteturadipisicing elit.<br> Lorem ipsum dolor sit <br> amet. Lorem ipsum dolor.<hr align="left"></p>
       </section>
+<!--------------------------------------- mainSection -------------------------------------------->
 
       <main>
             <div class="box">
@@ -54,6 +60,7 @@
             </div>
            
       </main>
+<!--------------------------------------- footer -------------------------------------------->
 
       <footer>
             

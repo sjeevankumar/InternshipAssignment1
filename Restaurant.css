@@ -6,6 +6,8 @@ body,html{
       height: 100vh;
      
 }
+
+      /* ............................Desktop version of the website starts from here................................... */
 body{
       margin: 0;
       display: grid;
@@ -14,22 +16,19 @@ body{
                              'aside main main main main main main'
                              'aside footer footer footer footer footer footer' ;
 }
+/* ...........sidebar........... */
 aside{
-      /* background-color: violet; */
       grid-area:aside ;
-      /* border: 2px solid red; */
       margin-left: 7rem;
       margin-top: 2rem;
       text-align: left;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      /* padding-bottom: 5rem; */
       margin-bottom: 5rem;
 
 }
 aside h1{
-      /* border: 2px solid red; */
       flex: .5;
       text-align: left;
       position: relative;
@@ -40,13 +39,17 @@ aside h1{
       padding-bottom: 0;
 }
 aside nav{
-      /* border: 2px solid red; */
-      flex:2;
-      
+      flex:2;  
 }
-aside button{
-      /* border: 2px solid red; */
+aside nav label{
+      font-size: 26px;
+      color: crimson;
+      display: none;
 }
+aside nav #expand_toggle{
+      display: none;
+}
+
 aside nav ul{
       display: flex;
       flex-direction: column;
@@ -57,11 +60,22 @@ aside nav ul{
       margin: 0;
       padding: 0;
 }
-aside nav ul li{
+aside nav ul li {
       list-style: none;
-      /* border: 2px solid red; */
       font-size:1.5rem;
       font-weight: lighter;
+}
+aside nav ul li a{
+      text-decoration: none;
+      color: black;
+}
+aside nav ul li .firstLink{
+      text-decoration: line-through;
+      text-decoration-color: crimson;
+      text-decoration-thickness: .2rem;
+}
+aside nav ul li a:hover{
+      color: crimson;
 }
 aside nav ul {
      padding: 0;
@@ -76,12 +90,18 @@ aside button{
       opacity: .8;
       color: white;
 }
+aside button:hover{
+      color: cyan;
+}
+.btn2{
+      display: none;
+}
+/* .........header......... */
 header{
-      /* background-color: tomato; */
       grid-area: header;
 }
+/* ..........section1........ */
 #sec1{
-      /* background-color: turquoise; */
       grid-area:section1 ;
       padding-left: 13rem;
 }
@@ -91,33 +111,39 @@ header{
       margin: 0;
       font-weight: bolder;
 }
+/*......... section2.......... */
 #sec2{
-      /* background-color: crimson; */
       grid-area:section2 ;
       padding-right: 12rem;
       font-size: 1.3rem;
       align-items: center;
+      letter-spacing: .1rem;
+      line-height: 2rem;
+      padding-bottom: 0;
+      margin-bottom: 0;
 }
+hr{
+      background-color: crimson;
+      height: .1rem;
+      width: 6rem;
+}
+/* ...........mainSection......... */
 main{
-      /* background-color: blue; */
       grid-area:main ;
-      /* border: 2px solid red; */
       display: flex;
       justify-content: space-between;
       margin-left: 15rem;
       margin-right: 2rem;
-      
 }
 main .box{
-      /* border: 2px solid red; */
       height: 100%;
       width: 20rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-radius: 1rem;
-      box-shadow:  .1rem .1rem .5rem black;
+      border-radius: 2rem;
+      box-shadow:  .1rem .1rem 5rem rgba(46,49,49,.3);
       outline: none;
       border: none;
 }
@@ -126,7 +152,132 @@ main .box .circularImage{
       width: 10rem;
       height: 10rem;
 }
+/* ........footer......... */
 footer{
-      /* background-color: chartreuse; */
       grid-area:footer ;
+}
+
+
+/*........................ Mobile version of the website starts from here.............................................. */
+
+@media screen and (max-width:500px) {
+      body{
+            display: flex;
+            flex-direction: column;
+            margin-left: 4rem;
+            margin-right: 4rem;            
+      }
+      /* ..........sidebar.......... */
+      aside {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            max-width: 500px;
+            padding: 0;
+            justify-content: space-around;
+            align-items: center;
+            order: 1;
+      }
+      aside h1{
+            flex: 1;
+            order: 2;
+            position: relative;
+            top: 2rem;
+      }
+      aside .toBeReplaced{
+            visibility: hidden;
+            position: relative;     
+      }
+      aside .toBeReplaced:after {
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "Lorem";
+        }
+      aside nav{
+            flex: 1;
+            order: 1;
+      }
+      #expand_btn{
+            display: block;
+            padding-left: 1rem;
+            position: relative;
+            top: .2rem;
+      }
+      #expand_toggle{
+            display: none;
+      }
+      aside nav ul li {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        padding: 1rem;
+        display: none;
+      }
+      #expand_toggle:checked ~ * .expandable {
+           
+            display: block;
+      }
+      aside button{
+            width: 5rem;
+            height: 3rem;
+            padding: 0;
+            flex: 1;
+            order: 3;
+            
+      }
+      .btn{
+            display: none;
+      }
+      .btn2{
+            display: block;
+            background-color: white;
+            font-size: 3rem;
+            position: relative;
+            bottom: .4rem;
+            left: 1.5rem;
+            
+      }
+      /* .............section1.................. */
+      #sec1{
+            order: 2;
+            padding: 3rem;
+            padding-left: 0;
+            font-weight: bolder;
+      }
+      #sec1 h1{
+            font-size: 3rem;
+      }
+      /* ................section2.............. */
+      #sec2{
+            order: 4;
+            margin: 0;
+            padding: 0;
+      }
+      #sec2 p{
+            font-size: 1.5rem;
+      }
+      #sec2 p br{
+            display: none;
+      }
+      /* ............mainSection................... */
+      main{
+            order: 3;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+      }
+      main .box{
+            height: 13rem;
+            width: 11rem;
+            padding: 1.5rem;
+            padding-top: 3.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+      }
+      main .box h1{
+            font-size: 1.3rem;
+            font-weight: bolder;
+      }
 }
